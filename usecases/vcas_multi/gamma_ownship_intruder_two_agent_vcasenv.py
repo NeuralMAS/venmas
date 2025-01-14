@@ -2,10 +2,10 @@ import itertools
 import numpy as np
 
 from src.actors.envs.multi_agent_environment import AbstractMultiAgentEnvironment
-from resources.vcas.two_agent_vcasenv_constants import VcasConstants
+from usecases.vcas_multi.two_agent_vcasenv_constants import VcasConstants
 from src.utils.constraint import LinearConstraint, WeightedSum
 from src.verification.bounds.bounds import HyperRectangleBounds
-from src.verification.complete.constrmanager.custom_constraints_manager import CustomConstraintsManager
+from src.verification.constrmanager.custom_constraints_manager import CustomConstraintsManager
 from operator import __ge__, __eq__
 
 def normalise_input(values):

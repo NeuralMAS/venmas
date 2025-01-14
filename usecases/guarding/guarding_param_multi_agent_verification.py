@@ -2,11 +2,11 @@
 
 import argparse
 import sys
-sys.path.append('../')
+sys.path.append('../../')
 
-from resources.guarding.guardagent import GuardingAgent, GuardingConstants
-from resources.guarding.guardzoagent import GuardingZeroOneAgent
-from resources.guarding.guardenv import GuardingEnv
+from usecases.guarding.guardagent import GuardingAgent, GuardingConstants
+from usecases.guarding.guardzoagent import GuardingZeroOneAgent
+from usecases.guarding.guardenv import GuardingEnv
 from src.network_parser.network_model import NetworkModel
 from src.utils.formula import *
 from src.verification.bounds.bounds import HyperRectangleBounds
@@ -134,7 +134,7 @@ def initialise_and_get_agent_and_env(agents_number, formula):
     """
 
     # Where the agent networks are.
-    REL_PATH = "../resources/guarding/agent.h5"
+    REL_PATH = "agent.h5"
 
     network_model = NetworkModel()
     network_model.parse(REL_PATH)

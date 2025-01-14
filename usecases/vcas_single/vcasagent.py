@@ -1,10 +1,7 @@
 from src.actors.agents.agent import Agent
-from resources.vcas.vcasenv import VcasConstants, get_advisories_delta_bounds
-from src.utils.constraint import LinearConstraint, WeightedSum
+from usecases.vcas.vcasenv import VcasConstants, get_advisories_delta_bounds
 from src.utils.utils import get_widest_bounds
 from src.verification.bounds.bounds import HyperRectangleBounds
-from src.verification.constrmanager.custom_constraints_manager import CustomConstraintsManager
-from operator import __eq__
 
 
 def normalise_input(values):

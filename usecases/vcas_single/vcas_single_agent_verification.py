@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
 import sys
-sys.path.append('../../')
+sys.path.append('../../../')
 
 import argparse
 import datetime
 import os
 
-from resources.vcas.vcasagent import VcasAgent
-from resources.vcas.vcasenv import VcasEnv, VcasConstants
+from usecases.vcas.vcasagent import VcasAgent
+from usecases.vcas.vcasenv import VcasEnv, VcasConstants
 from src.network_parser.network_model import NetworkModel
 from src.utils.formula import *
 from src.verification.bounds.bounds import HyperRectangleBounds
@@ -30,7 +30,7 @@ def initialise_and_get_agent_and_env():
     """
 
     # Where the agent networks are.
-    REL_PATH = "../resources/vcas/models/vcas_{}.h5"
+    REL_PATH = "vcas_single/models/vcas_{}.h5"
 
     network_models = []
     for i in range(VcasConstants.N_ADVISORIES):
@@ -75,7 +75,7 @@ def main():
     input_hyper_rectangle = HyperRectangleBounds(*unzipped)
     print("")
     log_info = verification_methods[ARGS.method](safety_formula, input_hyper_rectangle, agent, env, timeout=3600)
-    with open(f"vcas-{method_names[ARGS.method]}.log", "a") as file:
+    with open(f"vcas_single-{method_names[ARGS.method]}.log", "a") as file:
         file.write(
             f"{datetime.datetime.now()}, VCAS_{initial_climbrate}, {steps}, {log_info[0]:9.6f}, {log_info[1]}\n")
 

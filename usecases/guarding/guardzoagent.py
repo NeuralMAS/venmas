@@ -1,9 +1,9 @@
-from resources.guarding.guardagent import GuardingConstants
+from usecases.guarding.guardagent import GuardingConstants
 from src.actors.agents.agent import TemplateAgent
 from src.utils.utils import increment_indices
 from src.verification.bounds.bounds import HyperRectangleBounds
 
-from operator import __le__, __ge__, __eq__
+from operator import __le__, __ge__
 
 
 class GuardingZeroOneAgent(TemplateAgent):

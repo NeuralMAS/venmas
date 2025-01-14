@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-sys.path.append('../../')
+sys.path.append('../../../')
 
 from src.actors.agents.neural_agent import NeuralAgent
 from src.network_parser.network_model import NetworkModel
@@ -8,7 +8,7 @@ from src.utils.constants import NeuralOutputSettings
 from src.utils.formula import ANextFormula, VarConstConstraint, ConjFormula, StateCoordinate, LT, GT, \
     AtomicConjFormula
 from src.verification.bounds.bounds import HyperRectangleBounds
-from resources.frozenlake.frozenlakeenv import FrozenLakeEnv
+from usecases.frozenlake.frozenlakeenv import FrozenLakeEnv
 import numpy as np
 import argparse
 

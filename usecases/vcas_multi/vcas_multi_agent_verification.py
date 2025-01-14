@@ -3,15 +3,15 @@
 import argparse
 import collections
 import sys
-sys.path.append('../../')
+sys.path.append('../../../')
 
 import os
 
-from resources.vcas.gamma_intruder_two_agent_vcasenv import TwoAgentIntruderVcasEnv
-from resources.vcas.gamma_ownship_two_agent_vcasenv import TwoAgentOwnshipVcasEnv
+from usecases.vcas.gamma_intruder_two_agent_vcasenv import TwoAgentIntruderVcasEnv
+from usecases.vcas.gamma_ownship_two_agent_vcasenv import TwoAgentOwnshipVcasEnv
 
-from resources.vcas.two_agent_vcas_agents import VcasOwnshipAgent, VcasIntruderAgent
-from resources.vcas.gamma_ownship_intruder_two_agent_vcasenv import VcasConstants, TwoAgentOwnshipIntruderVcasEnv
+from usecases.vcas.two_agent_vcas_agents import VcasOwnshipAgent, VcasIntruderAgent
+from usecases.vcas.gamma_ownship_intruder_two_agent_vcasenv import VcasConstants, TwoAgentOwnshipIntruderVcasEnv
 
 from src.network_parser.network_model import NetworkModel
 from src.utils.formula import *
@@ -123,7 +123,7 @@ def initialise_and_get_agent_and_env(agent_config):
     """
 
     # Where the agent networks are.
-    REL_PATH = "../resources/vcas-v0/vcas_{}.h5"
+    REL_PATH = "../resources/vcas_single-v0/vcas_{}.h5"
 
     # Dimension of the action space; there is only one action, the advisory, returned by the agent.
     ACTION_SPACE_DIM = 1

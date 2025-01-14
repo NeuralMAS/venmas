@@ -1,8 +1,8 @@
 from src.actors.agents.agent import MultiAgent
-from resources.vcas.gamma_ownship_intruder_two_agent_vcasenv import VcasConstants
+from usecases.vcas_multi.gamma_ownship_intruder_two_agent_vcasenv import VcasConstants
 from src.utils.constraint import LinearConstraint, WeightedSum
 from src.verification.bounds.bounds import HyperRectangleBounds
-from src.verification.complete.constrmanager.custom_constraints_manager import CustomConstraintsManager
+from src.verification.constrmanager.custom_constraints_manager import CustomConstraintsManager
 from operator import __eq__
 
 

@@ -1,11 +1,5 @@
-import numpy as np
-
-from resources.guarding.guardagent import GuardingConstants
 from src.actors.envs.environment import Environment
 from src.verification.bounds.bounds import HyperRectangleBounds
-from operator import __ge__, __eq__
-
-
 
 
 class GuardingEnv(Environment):
